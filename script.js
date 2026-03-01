@@ -27,20 +27,6 @@ const categories = [
     cover:
       "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
   },
-  {
-    id: "concept-environments",
-    name: "Concept Environments",
-    description: "Environment ideation pieces that blend architecture, mood, and narrative space.",
-    cover:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "sketchbook-pages",
-    name: "Sketchbook Pages",
-    description: "Personal sketchbook snapshots capturing ideas, experiments, and iterative process.",
-    cover:
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
-  },
 ];
 
 const artworks = [
@@ -71,20 +57,6 @@ const artworks = [
   { title: "Station Study", category: "marker-studies", medium: "Marker perspective", year: 2024, image: "https://images.unsplash.com/photo-1507901747481-84a4f64fda6d?auto=format&fit=crop&w=1000&q=80" },
   { title: "Color Notes", category: "marker-studies", medium: "Palette drill", year: 2024, image: "https://images.unsplash.com/photo-1452802447250-470a88ac82bc?auto=format&fit=crop&w=1200&q=80" },
   { title: "Night Marker", category: "marker-studies", medium: "Fast marker sketch", year: 2023, image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=960&q=80" },
-
-  // Concept Environments (5)
-  { title: "Neon Courtyard", category: "concept-environments", medium: "Environment concept", year: 2025, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Fog Platform", category: "concept-environments", medium: "Mood painting", year: 2025, image: "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Glass Hall", category: "concept-environments", medium: "Digital matte", year: 2024, image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Skyline Vault", category: "concept-environments", medium: "Perspective study", year: 2024, image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Signal Bridge", category: "concept-environments", medium: "Color key", year: 2023, image: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=80" },
-
-  // Sketchbook Pages (5)
-  { title: "Page 17", category: "sketchbook-pages", medium: "Pencil sketch", year: 2025, image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Page 23", category: "sketchbook-pages", medium: "Ink thumbnails", year: 2025, image: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Page 29", category: "sketchbook-pages", medium: "Character roughs", year: 2024, image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Page 36", category: "sketchbook-pages", medium: "Gesture notes", year: 2024, image: "https://images.unsplash.com/photo-1459908676235-d5f02a50184b?auto=format&fit=crop&w=1200&q=80" },
-  { title: "Page 41", category: "sketchbook-pages", medium: "Idea map", year: 2023, image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80" },
 ];
 
 const mainContent = document.querySelector("#main-content");
@@ -187,3 +159,4 @@ themeToggle.addEventListener("click", () => {
 
 renderCategoryTiles();
 renderHomepageGallery();
+
