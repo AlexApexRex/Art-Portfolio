@@ -6,9 +6,7 @@
     <title>Alex Li | Art Portfolio</title>
     <meta
       name="description"
-      content="Hi, I'm Alex, also known as Xiang Li. 
-      Welcome to my portfolio - a collection of drawings inspired by the stories, characters, and ideas that stick with me.
-      Feel free to explore, and thanks for stopping by:)"
+      content="Hi, I'm Alex, also known as Xiang Li. Welcome to my portfolio - a collection of drawings inspired by stories, characters, and ideas that stay with me."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,14 +17,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Decorative paper texture overlay -->
     <div class="paper-texture" aria-hidden="true"></div>
 
-    <!-- Header / Navigation -->
     <header class="site-header" id="top">
       <a class="brand" href="#top">Alex Li</a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#home">Home</a>
+        <a href="#styles">Styles</a>
         <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -36,70 +33,72 @@
       </button>
     </header>
 
-    <main>
-      <!-- Hero: your name as an art element -->
-      <section id="home" class="hero container">
+    <main id="main-content" class="view-home">
+      <section id="home" class="hero container home-only">
         <div class="hero-sketch hero-sketch-left" aria-hidden="true"></div>
         <div class="hero-sketch hero-sketch-right" aria-hidden="true"></div>
 
         <p class="hero-kicker">Portfolio 2026</p>
         <h1 class="hero-title">
-          <!-- Change this text to your real name -->
           <span class="hero-title-script">Alex Li</span>
           <span class="hero-title-print">ART & VISUAL STORYTELLING</span>
         </h1>
         <p class="hero-description">
-          I explore memory, atmosphere, and emotion through drawings on paper and digital paintings. 
-          By combining sketching, modern composition, anime-inspired digital-design, and marker work,
-          I aim to capture fleeting ideasand moments of imagination.
+          I explore memory, atmosphere, and emotion through drawings on paper and digital paintings.
+          By combining sketching, modern composition, anime-inspired digital design, and marker work,
+          I aim to capture fleeting ideas and moments of imagination.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#gallery">View Works</a>
+          <a class="btn btn-primary" href="#styles">Browse Categories</a>
           <a class="btn btn-secondary" href="#about">Read Artist Statement</a>
         </div>
       </section>
 
-      <!-- Gallery / Portfolio -->
-      <section id="gallery" class="gallery container">
+      <section id="styles" class="styles container home-only">
+        <div class="section-heading">
+          <h2>Collections by Style</h2>
+          <p>Click a style tile to load a full collection view without changing the URL.</p>
+        </div>
+        <div id="category-grid" class="category-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="gallery" class="gallery container home-only">
         <div class="section-heading">
           <h2>Selected Works</h2>
-          <p>Low-opacity previews reveal fully on hover.</p>
+          <p>Quick preview across all categories.</p>
         </div>
-
-        <!-- Filter controls -->
-        <div class="filters" aria-label="Filter artworks">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-btn" data-filter="paper" aria-pressed="false">Paper</button>
-          <button class="filter-btn" data-filter="digital" aria-pressed="false">Digital</button>
-        </div>
-
-        <!-- Gallery grid is rendered by JavaScript -->
         <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
       </section>
 
-      <!-- About -->
-      <section id="about" class="about container card">
+      <section id="about" class="about container card home-only">
         <h2>About</h2>
         <p>
-          My work blends traditional materials with digital workflow. I’m interested in
-          color harmony, human expression, and cinematic composition. I often start with
-          quick pencil thumbnails, then build finished pieces using watercolor, marker,
-          and digital paint.
+          My work blends traditional materials with digital workflow. I’m interested in color harmony,
+          human expression, and cinematic composition. I often start with quick pencil thumbnails,
+          then build finished pieces using watercolor, marker, and digital paint.
         </p>
       </section>
 
-      <!-- Contact -->
-      <section id="contact" class="contact container card">
+      <section id="contact" class="contact container card home-only">
         <h2>Contact</h2>
-        <!-- Update this contact info -->
         <p>Email: xiang.li.titration@gmail.com</p>
         <p>Instagram: @alexlee9696</p>
         <p>Text: +1(909)-787-0385</p>
       </section>
+
+      <section id="collection-view" class="collection-view container" aria-live="polite" hidden>
+        <div class="collection-header">
+          <button id="back-to-home" class="btn btn-secondary" type="button">← Back to Homepage</button>
+          <div>
+            <h2 id="collection-title">Collection</h2>
+            <p id="collection-description"></p>
+          </div>
+        </div>
+        <div id="collection-grid" class="gallery-grid"></div>
+      </section>
     </main>
 
-    <!-- Card template used by JavaScript -->
     <template id="art-card-template">
       <article class="art-card" tabindex="0">
         <img class="art-image" src="" alt="" loading="lazy" />
@@ -110,7 +109,16 @@
       </article>
     </template>
 
+    <template id="category-card-template">
+      <button class="category-card" type="button">
+        <img class="category-image" src="" alt="" loading="lazy" />
+        <div class="category-overlay">
+          <h3 class="category-title"></h3>
+          <p class="category-count"></p>
+        </div>
+      </button>
+    </template>
+
     <script src="script.js" defer></script>
   </body>
-
 </html>
