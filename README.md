@@ -1,19 +1,17 @@
-# Minimalist Paper-Style Art Portfolio
+# Alex Li Portfolio (Single-Page Collections)
 
-A clean, modern portfolio starter with:
+Minimalist paper-style portfolio with:
 
-- light-first design
-- subtle paper texture background
-- soft pastel accents
-- responsive gallery with filter buttons
-- low-opacity artwork previews that fully reveal on hover
-- optional light/dark theme toggle
+- light-first pastel design + optional dark mode
+- category tiles that open a full collection view **without changing URL**
+- 6 sample categories with 5 sample artworks each (30 total placeholders)
+- responsive gallery cards with low-opacity previews + label fade on hover
 
 ## Files
 
-- `index.html` — page layout (hero, gallery, about, contact)
-- `styles.css` — design system, responsive styles, animations, theme variables
-- `script.js` — artwork data, filtering logic, and theme toggle behavior
+- `index.html` — page sections, category + artwork templates
+- `styles.css` — pastel theme, responsive layout, hover transitions
+- `script.js` — data model and dynamic single-page collection behavior
 
 ## Run locally
 
@@ -21,11 +19,10 @@ A clean, modern portfolio starter with:
 python3 -m http.server 4173
 ```
 
-Open: `http://localhost:4173`
+Open `http://localhost:4173`.
 
-## Customize quickly
+## Customize
 
-1. Replace your name in `index.html` (`YOUR NAME`, `Xiang Li`).
-2. Update contact details in the contact section.
-3. Add your real artwork entries in `script.js` (`title`, `category`, `medium`, `year`, `image`).
-4. Tweak pastel colors in `styles.css` `:root` variables.
+1. Replace your profile text in `index.html` (hero/about/contact).
+2. Replace sample `categories` and `artworks` in `script.js` with your real work.
+3. Update colors in `:root` in `styles.css`.
